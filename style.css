@@ -7,3 +7,7 @@ Description: Pefak je jednoduche tema vytvorene pro budpefak.czu.cz pro CZU PEF.
 Tags: czu, pef, pefak, budpefak, theme, wordpress
 
 */
+
+img {
+    max-width: 100%;   
+}
