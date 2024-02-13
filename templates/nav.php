@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg" style="background-color: #C80C0F;">
+    <div class="container-fluid">        
+        <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a> <!--home_url() is a WordPress function that returns the URL of the home page.-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,8 +29,8 @@
                     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="d-flex" role="search" action="<?php echo home_url()?>">
+                <input name="s" class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> <!--name="s" is a WordPress convention for search forms.-->
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
