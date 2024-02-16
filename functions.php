@@ -7,6 +7,7 @@ add_action('init', function(){      //init is a hook that runs after WordPress h
     wp_enqueue_style('bootstrapcss', get_template_directory_uri().'/assets/css/bootstrap.min.css');
     wp_enqueue_style('style', get_template_directory_uri().'/style.css');
     wp_enqueue_script('bootstrapjs', get_template_directory_uri().'/assets/js/bootstrap.min.js', ['jquery'], '', true); //true means the script will be placed at the bottom of the page
+    wp_enqueue_style('fontawesome', get_template_directory_uri().'/assets/css/all.min.css');
     
 
 });
@@ -18,3 +19,6 @@ add_action('after_setup_theme', function(){
     add_image_size('post-thumbnail', 280, 180, true); //this will add a custom image size for the featured images
 });
 
+function currentYear(){
+    return date('Y');
+}

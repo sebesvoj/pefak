@@ -5,8 +5,16 @@
         ?>
     </div>
     <h5 class="card-title"><?= the_title() ?></h5>
+    <p class="card-text"><small class="text-muted">Poslední aktualizace: <?= get_the_modified_date() ?></small></p>
+    <p class="card-text"><?= get_the_content() ?></p>
+</div>
+
+    <div></div>
     <div class="card-body">
         <p class="card-text"><?= substr(get_the_excerpt(), 0, 280) ?></p>
+        
         <a href="<?php the_permalink() ?>" class="btn btn-primary">Čti dál</a>
+        <p class="card-text"><small class="text-muted">Poslední aktualizace: <?= get_the_modified_date() ?></small></p>
+
     </div>
 </div>
