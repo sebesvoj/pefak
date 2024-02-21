@@ -1,6 +1,16 @@
 <?php wp_footer(); ?>
 
-<footer style="background-color: #C80C0F; color: white;">
+
+<footer <?php if (is_404()) : ?> class="sticky-md-bottom" <?php endif; ?> style="background-color: #C80C0F; color: white;">
+    <?php
+    wp_nav_menu(
+        array(
+            'theme_location' => 'footer-menu',
+            'container_class' => 'my_extra_menu_class'
+        )
+    );
+
+    ?>
     <div class="container-lg">
         <div class="row mx-4">
             <div class="col-md-4 mb-3 mt-3 text-md-start text-center">
@@ -16,7 +26,7 @@
                     165 00 Praha - Suchdol
                     <br>
                     <small>
-                        <small>&copy; <?= currentYear();?> PEF, Česká zemědělská univerzita v Praze
+                        <small>&copy; <?= currentYear(); ?> PEF, Česká zemědělská univerzita v Praze
                             <br>
                             Všechna práva vyhrazena
                         </small>

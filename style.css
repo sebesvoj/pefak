@@ -13,6 +13,18 @@ img {
     max-width: 100%;   
 }
 
+.page-numbers {
+  display: inline-block;
+  padding: 10px;
+  border: solid thin #aaa;
+  text-decoration: none;
+
+} 
+
+/*========================================================================
+ --- cyrcle buttons --- 
+==========================================================================*/
+
 
 .btn-circle {
     width: 45px;
@@ -56,3 +68,6 @@ img {
     color: #000;
     background-color: #fff;
 }
+
+
+/* --- end of cyrcle buttons --- */

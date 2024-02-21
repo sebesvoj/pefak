@@ -7,22 +7,22 @@
     <div class="carousel-inner">
         <!-- dodelat automaticke pridavani obrazku do carouselu z wp rozhrani -->
         <!-- dodělat sass pro WP abych mohl měnit atributy css snadno -->
-        <div class="carousel-item active" data-bs-interval="10000">
-            <img src="<?= get_template_directory_uri() . '/assets/images/kida.webp' ?>" class="d-block w-100" alt="Partička studentů před budovou PEF.">
+        <div class="carousel-item active">
+            <img src="<?= get_template_directory_uri() . '/assets/images/kida.jpg' ?>" class="d-block w-100" alt="Partička studentů před budovou PEF.">
             <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>Some representative placeholder content for the first slide.</p>
             </div>
         </div>
-        <div class="carousel-item" data-bs-interval="10000">
-            <img src="<?= get_template_directory_uri() . '/assets/images/kytky.webp' ?>" class="d-block w-100" alt="Partička studentů v horním patře atria.">
+        <div class="carousel-item">
+            <img src="<?= get_template_directory_uri() . '/assets/images/kytky.jpg' ?>" class="d-block w-100" alt="Partička studentů v horním patře atria.">
             <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>Some representative placeholder content for the first slide.</p>
             </div>
         </div>
-        <div class="carousel-item" data-bs-interval="10000">
-            <img src="<?= get_template_directory_uri() . '/assets/images/budova.webp' ?>" class="d-block w-100" alt="Pohled na budovu PEF z dronu.">
+        <div class="carousel-item">
+            <img src="<?= get_template_directory_uri() . '/assets/images/budova.jpg' ?>" class="d-block w-100" alt="Pohled na budovu PEF z dronu.">
             <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>Some representative placeholder content for the first slide.</p>

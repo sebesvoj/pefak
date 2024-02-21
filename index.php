@@ -13,6 +13,12 @@ if (is_front_page()) get_template_part('templates/slider');
         }
     }
     ?>
+
 </div>
+<br>
+<div class="d-flex mx-auto justify-content-center"><?php the_posts_pagination();?></div> <!-- viz video 10, kde vysvětluje, jak se to dělá -->
+<br>
+
+
 
 <?php get_footer(); ?>
