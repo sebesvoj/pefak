@@ -51,7 +51,7 @@ class header_menu_walker extends Walker {
 		$indent = str_repeat( $t, $depth );
 
 		// Default class.
-		$classes = array( 'sub-menu' );
+		$classes = array( 'dropdown-menu' );
 
 		/**
 		 * Filters the CSS class(es) applied to a menu list element.
@@ -141,6 +141,13 @@ class header_menu_walker extends Walker {
 		$classes   = empty( $menu_item->classes ) ? array() : (array) $menu_item->classes;
 		$classes[] = 'menu-item-' . $menu_item->ID;
 
+        $classes[] = array();
+        $classes[] = 'nav-item';
+
+        if ($this->has_children) {
+            $classes[] = 'dropdown';
+        }
+
 		/**
 		 * Filters the arguments for a single nav menu item.
 		 *
@@ -222,6 +229,20 @@ class header_menu_walker extends Walker {
 		}
 
 		$atts['aria-current'] = $menu_item->current ? 'page' : '';
+        $atts['class'] = 'nav-link';
+
+        if ($depth > 0) {
+            $atts['class'] = 'nav-link dropdown-item';
+        }
+
+        if ($this->has_children) {
+            $atts['class'] = 'nav-link dropdown-toggle';
+            $atts['href'] = '#';    //this is the link that will be clicked to open the dropdown
+            $atts['id'] = 'navbarDropdown';
+            $atts['role'] = 'button';
+            $atts['data-bs-toggle'] = 'dropdown';
+            $atts['aria-expanded'] = 'false';
+        }
 
 		/**
 		 * Filters the HTML attributes applied to a menu item's anchor element.

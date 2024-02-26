@@ -21,6 +21,47 @@ img {
 
 } 
 
+/* --- header --- */
+
+@media (min-width: 1200px) {    
+  .container{
+      max-width: 970px;     /* 970px is the default Bootstrap container width */
+  }
+}
+
+.navbar .navbar-nav .nav-link {
+  /* strong and bold text */
+  font-weight: bold;
+  color: #fff;
+}
+
+.dropdown-menu {
+  background-color: #C80C0F;  
+  min-width: 200px;
+  display: none;
+  position: absolute;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.dropdown-menu a:hover {
+  color: #000 !important;
+}
+
+.dropdown-menu a {
+  color: #fff;
+  padding-left: 10px;
+  display: block; 
+}
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
+
+
 /*========================================================================
  --- cyrcle buttons --- 
 ==========================================================================*/

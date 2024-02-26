@@ -9,6 +9,6 @@
     <?php wp_head();?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="padding-top: 4.5rem;">
     <?php wp_body_open(); ?>
     
